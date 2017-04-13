@@ -1148,7 +1148,7 @@ StScrollBar StButton#vhandle:active {
     font-size: 9pt;
     font-weight: normal;
     padding: 2px 0px;
-    background-color: rgba(26, 25, 24, 0.5);
+    background-color: #4c1319; /*rgba(26, 25, 24, 0.5);*/
     border: 1px solid rgba(128, 128, 128, 0.4);
     border-left: 0px;
     border-radius: 0px 0px 0px 0px;
@@ -1339,14 +1339,14 @@ StScrollBar StButton#vhandle:active {
     padding: 0px 0px 0px 0px;
 }
 
-.dash-item-container > StWidget
-/*.dash-item-container > .app-well-app > .overview-icon*/ {
+/* .dash-item-container > StWidget
+.dash-item-container > .app-well-app > .overview-icon {
     border-image: url("running-indicator-base.svg");
     transition-duration: 100ms;
     text-align: center;
     padding: 10px 10px 10px 10px;
 }
-/*
+
 .dash-item-container > .app-well-app.running > .overview-icon {
     border-image: url("running-indicator-dash-1.svg");
     text-shadow: none;
@@ -2288,6 +2288,8 @@ StScrollBar StButton#vhandle:active {
 .switcher-list .item-box {
     padding: 8px;
     border-radius: 8px;
+    background: transparent;
+    background-image: url('running-indicator-base.svg');
 }
 
 .switcher-list .item-box:outlined {
@@ -2296,7 +2298,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 .switcher-list .item-box:selected {
-    background: rgba(255,255,255,0.33);
+    /*background: rgba(255,255,255,0.33);*/
+    /*background-color: rgba(240,119,71,0.33);*/
+    background-image: url('running-indicator-base-focused.svg');
 }
 
 .switcher-list .thumbnail-box {
@@ -3194,9 +3198,9 @@ StScrollBar StButton#vhandle:active {
 
 /* ------------------ CUSTOM ADDITIONS ---------------------- */
 
-/* Active App underline */
+/* Active App underline 
 .app-well-app-running-dot {
-	width: 52px;
+	width: 38px;
 	height: 6px;
 	border-radius: 13px;
 	margin-bottom: 0px;
@@ -3205,11 +3209,11 @@ StScrollBar StButton#vhandle:active {
         background-gradient-end: rgba(255,255,255,0.3); 
         background-gradient-direction: vertical;
 	box-shadow: 0 0 3px 2px rgba(255,255,255,0.32);
-}
+} */
 
 .show-apps .show-apps-icon {
   border: none;
-  background-image: url("bfb.png");
+  background-image: url("bfb_launcher.png");
   background-size: 100% 100%;
   color: transparent;
   -st-background-image-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.14); }
@@ -3219,7 +3223,41 @@ StScrollBar StButton#vhandle:active {
 .show-apps:checked .show-apps-icon,
 .show-apps:focus .show-apps-icon {
   color: transparent;
-  background-image: url("bfb.png");
+  background-image: url("bfb_launcher.png");
   -st-background-image-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.22);
   transition-duration: 0.2s; }
 
+/* MORE launcher custom images */
+.app-well-app-running-dot {
+  background-color: transparent; }
+
+.dash-item-container > StWidget {
+  transition-duration: 100ms;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  background-image: url("running-indicator-base.svg");
+  background-size: cover; }
+
+.left .dash-item-container > StWidget.running1 {
+  background-image: url("running-indicator-dash-1.svg"); }
+
+.left .dash-item-container > StWidget.running1.focused {
+  background-image: url("running-indicator-dash-1-focused.svg"); }
+
+.left .dash-item-container > StWidget.running2 {
+  background-image: url("running-indicator-dash-2.svg"); }
+
+.left .dash-item-container > StWidget.running2.focused {
+  background-image: url("running-indicator-dash-2-focused.svg"); }
+
+.left .dash-item-container > StWidget.running3 {
+  background-image: url("running-indicator-dash-3.svg"); }
+
+.left .dash-item-container > StWidget.running3.focused {
+  background-image: url("running-indicator-dash-3-focused.svg"); }
+
+.left .dash-item-container > StWidget.running4 {
+  background-image: url("running-indicator-dash-4.svg"); }
+
+.left .dash-item-container > StWidget.running4.focused {
+  background-image: url("running-indicator-dash-4-focused.svg"); }
