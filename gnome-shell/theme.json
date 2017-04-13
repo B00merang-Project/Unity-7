@@ -1,0 +1,10 @@
+{ 
+   "shell-theme": {
+   "name": "Ambiance-Gnome", 
+   "author": "DarkBeastOfPrey", 
+   "version": "3.14-1.8",
+   "type":   "custom",
+   "thumbnail": "thumbnail.png",
+   "url": ""
+    }
+}
