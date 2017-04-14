@@ -4,7 +4,7 @@
 vte-terminal.terminal-screen {
     -TerminalScreen-background-darkness: 0.95;
     background-color: @terminal_bg;
-    color: #fff;
+    color: @terminal_fg;
 }
 
 terminal-screen-container scrollbar:hover,

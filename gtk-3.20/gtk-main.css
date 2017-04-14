@@ -62,6 +62,9 @@
 
 @define-color scrollbar_track_color mix(@base_color, black, 0.1); /* #e6e6e6 */
 
+@define-color terminal_bg #2d0a20;
+@define-color terminal_fg #fff;
+
 @define-color progressbar_fill_a shade(@theme_selected_bg_color, 1.07);
 @define-color progressbar_fill_b shade(mix(@theme_selected_bg_color, @selected_bg_color, 0.10), 0.91);
 @define-color button_border_active shade(@theme_selected_bg_color, 0.95);
