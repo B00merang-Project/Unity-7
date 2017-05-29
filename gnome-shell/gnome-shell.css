@@ -2299,7 +2299,7 @@ StScrollBar StButton#vhandle:active {
 
 .switcher-list .item-box:selected {
     /*background: rgba(255,255,255,0.33);*/
-    /*background-color: rgba(240,119,71,0.33);*/
+    background-color: rgba(240,119,71,0.33);
     background-image: url('running-indicator-base-focused.svg');
 }
 
