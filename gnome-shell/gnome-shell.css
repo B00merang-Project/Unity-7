@@ -460,23 +460,27 @@ StScrollBar StButton#vhandle:active {
 /* Buttons */
 
 .candidate-page-button,
-.modal-dialog-button {
+.modal-dialog-button,
+.modal-dialog-linked-button {
     border: 1px solid #78766e;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(89, 87, 78, 0.5);
     background-gradient-end: rgba(32, 31, 28, 0.5);
 }
 
-.modal-dialog-button {
+.modal-dialog-button,
+.modal-dialog-linked-button {
     font-weight: normal;
 }
 
 .candidate-page-button:hover,
-.modal-dialog-button:hover {
+.modal-dialog-button:hover,
+.modal-dialog-linked-button:hover {
     border: 1px solid #f07746;
 }
 
-.modal-dialog-button:focus {
+.modal-dialog-button:focus,
+.modal-dialog-linked-button:focus {
     border-width: 2px;
     border-color: #f07746;
     background-gradient-start: rgba(247,133,86,0.9); 
@@ -486,20 +490,24 @@ StScrollBar StButton#vhandle:active {
 .candidate-page-button:active,
 .candidate-page-button:pressed,
 .modal-dialog-button:active,
-.modal-dialog-button:pressed {
+.modal-dialog-button:pressed,
+.modal-dialog-linked-button:active,
+.modal-dialog-linked-button:pressed {
     background-gradient-start: rgba(32,31,28,0.5); 
     background-gradient-end: rgba(89,87,78,0.5);
 }
 
 .candidate-page-button:insensitive,
-.modal-dialog-button:insensitive {
+.modal-dialog-button:insensitive,
+.modal-dialog-linked-button:insensitive {
     border-color: #666666;
     color: #9f9f9f;
     background-gradient-direction: none;
     background-color: rgba(102, 102, 102, 0.15);
 }
 
-.end-session-dialog .modal-dialog-button {
+.end-session-dialog .modal-dialog-button,
+.end-session-dialog .modal-dialog-linked-button {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255, 255, 255, 0.0);
@@ -509,7 +517,8 @@ StScrollBar StButton#vhandle:active {
     font-weight: normal;
 }
 
-.end-session-dialog .modal-dialog-button:hover {
+.end-session-dialog .modal-dialog-button:hover,
+.end-session-dialog .modal-dialog-linked-button:hover {
     border: 1px solid rgba(255, 255, 255, 0.9);
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255, 255, 255, 0.9);
@@ -517,7 +526,8 @@ StScrollBar StButton#vhandle:active {
     color: rgba(96,17,36,1.0);
 }
 
-.end-session-dialog .modal-dialog-button:focus {
+.end-session-dialog .modal-dialog-button:focus,
+.end-session-dialog .modal-dialog-linked-button:focus {
     border: 1px solid rgba(255, 255, 255, 0.9);
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255, 255, 255, 0.9);
@@ -679,6 +689,7 @@ StScrollBar StButton#vhandle:active {
 
 .search-entry,
 .modal-dialog-button,
+.modal-dialog-linked-button,
 .notification-button,
 .hotplug-notification-item,
 .app-view-controls,
@@ -907,6 +918,8 @@ StScrollBar StButton#vhandle:active {
     font-weight: bold;
     color: #dfdbd2;
     transition-duration: 100ms;
+    border: 1px solid transparent;
+    border-radius: 8px 8px 0 0;
 }
 
 #panel.unlock-screen .panel-button,
@@ -935,10 +948,11 @@ StScrollBar StButton#vhandle:active {
 .panel-button:active,
 .panel-button:overview,
 .panel-button:focus {
-    border-image: url("panel-button-border.png") 6 6 6 6;
+    border-color: #000;
     background-image: none;
     color: #dfdbd2;
     text-shadow: transparent 0px 0px 2px;
+    box-shadow: none;
 }
 
 .panel-status-button,
@@ -2447,15 +2461,18 @@ StScrollBar StButton#vhandle:active {
     padding-top: 50px;
 }
 
-.modal-dialog-button {
+.modal-dialog-button,
+.modal-dialog-linked-button {
     padding: 4px 32px 5px;
 }
 
-.modal-dialog-button:focus {
+.modal-dialog-button:focus,
+.modal-dialog-linked-button:focus {
     padding: 3px 31px 4px;
 }
 
-.end-session-dialog .modal-dialog-button {
+.end-session-dialog .modal-dialog-button,
+.end-session-dialog .modal-dialog-linked-button {
     border-radius: 13px;
     padding: 4px;
     min-width: 168px;
@@ -3005,38 +3022,46 @@ StScrollBar StButton#vhandle:active {
     spacing: 3px;
 }
 
-.login-dialog .modal-dialog-button {
+.login-dialog .modal-dialog-button,
+.login-dialog .modal-dialog-linked-button {
     border-radius: 5px;
     padding: 3px 18px;
 }
 
-.login-dialog .modal-dialog-button:focus {
+.login-dialog .modal-dialog-button:focus,
+.login-dialog .modal-dialog-linked-button:focus {
     padding: 2px 17px;
 }
 
-.login-dialog .modal-dialog-button:default {
+.login-dialog .modal-dialog-button:default,
+.login-dialog .modal-dialog-linked-button:default {
     background-gradient-start: #f78556;
     background-gradient-end: #cf5f32;
     background-gradient-direction: vertical;
     border-color: #672f19;
 }
 
-.login-dialog .modal-dialog-button:default:focus {
+.login-dialog .modal-dialog-button:default:focus,
+.login-dialog .modal-dialog-linked-button:default:focus {
     border: 2px solid #f07746;
 }
 
-.login-dialog .modal-dialog-button:default:hover {
+.login-dialog .modal-dialog-button:default:hover,
+.login-dialog .modal-dialog-linked-button:default:hover {
     background-gradient-start: #ffb677;
     background-gradient-end: #ff8345;
 }
 
 .login-dialog .modal-dialog-button:default:active,
-.login-dialog .modal-dialog-button:default:pressed {
+.login-dialog .modal-dialog-button:default:pressed,
+.login-dialog .modal-dialog-linked-button:default:active,
+.login-dialog .modal-dialog-linked-button:default:pressed {
     background-gradient-start: #cf5f32;
     background-gradient-end: #f78556;
 }
 
-.login-dialog .modal-dialog-button:default:insensitive {
+.login-dialog .modal-dialog-button:default:insensitive,
+.login-dialog .modal-dialog-linked-button:default:insensitive {
     border-color: #666666;
     color: #9f9f9f;
     background-gradient-direction: none;
@@ -3213,8 +3238,10 @@ StScrollBar StButton#vhandle:active {
 
 .show-apps .show-apps-icon {
   border: none;
+  padding: 0;
   background-image: url("bfb_launcher.png");
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
   color: transparent;
   -st-background-image-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.14); }
 
@@ -3234,30 +3261,30 @@ StScrollBar StButton#vhandle:active {
 .dash-item-container > StWidget {
   transition-duration: 100ms;
   text-align: center;
-  padding: 10px 10px 10px 10px;
+  padding: 2px;
   background-image: url("running-indicator-base.svg");
   background-size: cover; }
 
-.left .dash-item-container > StWidget.running1 {
+.dash-item-container > StWidget.running1 {
   background-image: url("running-indicator-dash-1.svg"); }
 
-.left .dash-item-container > StWidget.running1.focused {
+.dash-item-container > StWidget.running1.focused {
   background-image: url("running-indicator-dash-1-focused.svg"); }
 
-.left .dash-item-container > StWidget.running2 {
+.dash-item-container > StWidget.running2 {
   background-image: url("running-indicator-dash-2.svg"); }
 
-.left .dash-item-container > StWidget.running2.focused {
+.dash-item-container > StWidget.running2.focused {
   background-image: url("running-indicator-dash-2-focused.svg"); }
 
-.left .dash-item-container > StWidget.running3 {
+.dash-item-container > StWidget.running3 {
   background-image: url("running-indicator-dash-3.svg"); }
 
-.left .dash-item-container > StWidget.running3.focused {
+.dash-item-container > StWidget.running3.focused {
   background-image: url("running-indicator-dash-3-focused.svg"); }
 
-.left .dash-item-container > StWidget.running4 {
+.dash-item-container > StWidget.running4 {
   background-image: url("running-indicator-dash-4.svg"); }
 
-.left .dash-item-container > StWidget.running4.focused {
+.dash-item-container > StWidget.running4.focused {
   background-image: url("running-indicator-dash-4-focused.svg"); }
