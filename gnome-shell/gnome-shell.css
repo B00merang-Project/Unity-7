@@ -842,7 +842,8 @@ StScrollBar StButton#vhandle:active {
 #panel:overview {
     background-gradient-start: rgba(89,87,78,0);
     background-gradient-end: rgba(64,63,58,0);
-    background-gradient-direction: vertical;
+    background-gradient-direction: none;
+    background-color: rgba(76, 19, 25, 0.4);  /* #4c1319 */
 }
 
 #panelLeft, #panelCenter {
