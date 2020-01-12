@@ -1,13 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Ambiance
-Comment=Ubuntu Ambiance theme
+Name=Unity 7
+Comment=A GTK theme based on Ubuntu 14.04
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Ambiance
-MetacityTheme=Ambiance
-IconTheme=ubuntu-mono-dark
+GtkTheme=Unity 7
+MetacityTheme=Unity 7
+IconTheme=Humanity
 CursorTheme=DMZ-White
 ButtonLayout=close,minimize,maximize:
-X-Ubuntu-UseOverlayScrollbars=true
