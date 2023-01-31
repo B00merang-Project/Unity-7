@@ -84,7 +84,8 @@ label > selection {
   color: #FFFFFF;
   background-color: #F07746; }
   label > selection:focus-within {
-    color: #F07746; }
+    color: #FFFFFF;
+    background-color: #F07746; }
 
 label:disabled {
   color: #9f9f9e; }
@@ -93,7 +94,7 @@ label:disabled {
   > selection label:disabled {
     color: #c88b72; }
     > selection label:disabled:backdrop {
-      color: #d2d0cf; }
+      color: #dc9f87; }
 
 label.error {
   color: #ED3146; }
@@ -682,7 +683,7 @@ searchbar {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #dbd9d6;
-  background-color: #F2F1F0; }
+  background-color: #e7e5e3; }
 
 .nautilus-window .searchbar-container {
   margin-top: -1px; }
@@ -1108,24 +1109,23 @@ menubar, .menubar {
   menubar:backdrop, .menubar:backdrop {
     color: #d6d2ca;
     background-color: #3C3B37; }
-
-menubar > menuitem, .menubar > menuitem {
-  padding: 3px 5px;
-  border: 1px solid transparent;
-  color: #DFDBD2;
-  background-color: transparent; }
-  menubar > menuitem:hover, .menubar > menuitem:hover {
+  menubar > menuitem, .menubar > menuitem {
+    padding: 3px 5px;
+    border: 1px solid transparent;
     color: #DFDBD2;
-    border-radius: 6px 6px 0 0;
-    border-color: #302f2c;
-    background-color: #3C3B37;
-    background-image: linear-gradient(to bottom, #45443f, #3C3B37); }
-  menubar > menuitem:disabled, .menubar > menuitem:disabled {
-    color: #9f9f9e;
     background-color: transparent; }
-  menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
-    color: #828282;
-    background-color: transparent; }
+    menubar > menuitem:hover, .menubar > menuitem:hover {
+      color: #DFDBD2;
+      border-radius: 6px 6px 0 0;
+      border-color: #302f2c;
+      background-color: #3C3B37;
+      background-image: linear-gradient(to bottom, #45443f, #3C3B37); }
+    menubar > menuitem:disabled, .menubar > menuitem:disabled {
+      color: #9f9f9e;
+      background-color: transparent; }
+    menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
+      color: #828282;
+      background-color: transparent; }
 
 notebook {
   padding: 0; }
@@ -1700,8 +1700,7 @@ window.dialog.print drawing {
 window.dialog.print .dialog-action-box {
   margin: 12px; }
 
-frame,
-.frame {
+frame, .frame {
   border: 1px solid #dbd9d6; }
 
 frame {
