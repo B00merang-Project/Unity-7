@@ -10,6 +10,7 @@ This theme aims to recreate the appearance of Unity 7 on the GNOME and Cinnamon 
 - Any GTK-based desktop
 - Cinnamon
 - Gnome
+- MATE
 
 ### Manual installation
 Go to releases, download the latest `.zip` file and extract it to the themes directory i.e. `/home/USERNAME/.themes`
