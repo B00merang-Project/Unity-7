@@ -235,10 +235,10 @@ window.aboutdialog image.large-icons {
   border-width: 1px;
   border-radius: 6px;
   color: #DFDBD2;
-  border-color: #d1cecb;
-  border-left-color: #ccc9c5;
-  border-right-color: #ccc9c5;
-  border-bottom-color: #ada9a5;
+  border-color: #2d2d2a;
+  border-left-color: #2c2b29;
+  border-right-color: #2c2b29;
+  border-bottom-color: #252423;
   background-color: #3C3B37;
   background-image: linear-gradient(to bottom, #3f3e3a, #3a3936);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
@@ -257,10 +257,10 @@ window.aboutdialog image.large-icons {
     .osd button:backdrop:hover, button.osd:backdrop:hover {
       background-color: #403f3a; }
   .osd button:checked, button.osd:checked {
-    border-color: #b2aea9;
-    border-left-color: #a29d99;
-    border-right-color: #a29d99;
-    border-top-color: #928d88;
+    border-color: #262524;
+    border-left-color: #222221;
+    border-right-color: #222221;
+    border-top-color: #1f1e1d;
     background-color: #4c4b47;
     background-image: linear-gradient(to bottom, #302f2c, #393834);
     box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.1); }
@@ -302,15 +302,15 @@ window.aboutdialog image.large-icons {
     background-image: none;
     box-shadow: none; }
     .osd toolbar button:hover, toolbar.osd button:hover {
-      border-color: #d1cecb;
-      border-left-color: #ccc9c5;
-      border-right-color: #ccc9c5;
-      border-bottom-color: #ada9a5;
+      border-color: #2d2d2a;
+      border-left-color: #2c2b29;
+      border-right-color: #2c2b29;
+      border-bottom-color: #252423;
       color: #DFDBD2;
       background-color: #3C3B37; }
     .osd toolbar button:active, .osd toolbar button:checked, toolbar.osd button:active, toolbar.osd button:checked {
-      color: #4C4C4C;
-      background-color: #e1e1e0; }
+      color: #DFDBD2;
+      background-color: #3e3d39; }
     .osd toolbar button:disabled, toolbar.osd button:disabled {
       border-color: transparent;
       color: rgba(223, 219, 210, 0.8);
@@ -1989,38 +1989,34 @@ calendar {
     color: #828282;
     border-color: #dbd9d6; }
 
-messagedialog {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; }
-  messagedialog .background.csd {
-    border-radius: 4px;
-    color: #4C4C4C;
-    background-color: #F2F1F0; }
-  messagedialog decoration {
-    border-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-  messagedialog .titlebar.horizontal {
-    border: none;
+window.dialog.message {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  window.dialog.message .titlebar {
+    min-height: 20px;
     background-image: none;
-    background-color: #F2F1F0; }
-  messagedialog.csd .dialog-action-area button {
-    padding: 10px;
-    border-radius: 0;
+    background-color: #F2F1F0;
+    border-style: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; }
+  window.dialog.message box.dialog-vbox.vertical {
+    border-spacing: 10px; }
+  window.dialog.message label.title {
+    font-weight: 800;
+    font-size: 15pt; }
+  window.dialog.message.csd.background {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
+  window.dialog.message.csd .dialog-action-area button {
+    padding: 10px 14px;
+    border-radius: 0px;
+    border-left-style: solid;
+    border-right-style: none;
     border-bottom-style: none;
     background-image: none; }
-    messagedialog.csd .dialog-action-area button:last-child {
-      border-right-width: 0;
-      border-radius: 0px;
-      border-bottom-right-radius: 4px; }
-    messagedialog.csd .dialog-action-area button:first-child {
-      border-left-width: 0;
-      border-radius: 0px;
+    window.dialog.message.csd .dialog-action-area button:first-child {
+      border-left-style: none;
       border-bottom-left-radius: 4px; }
-    messagedialog.csd .dialog-action-area button:only-child {
-      border-radius: 0px;
-      border-bottom-left-radius: 4px;
+    window.dialog.message.csd .dialog-action-area button:last-child {
       border-bottom-right-radius: 4px; }
 
 .sidebar {
