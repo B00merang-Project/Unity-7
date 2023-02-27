@@ -1505,6 +1505,7 @@ scale {
   min-height: 10px;
   min-width: 10px;
   padding: 12px; }
+  scale > fill,
   scale > trough {
     border: 1px solid #c7c3c0;
     border-radius: 4px;
@@ -1514,15 +1515,19 @@ scale {
     scale.vertical > trough {
       background-image: linear-gradient(to right, #dbd9d6, #e2e0de);
       box-shadow: inset 1px 0 rgba(0, 0, 0, 0.1); }
+    scale > fill:backdrop,
     scale > trough:backdrop {
       background-color: #d0cdca; }
+    scale > fill:disabled,
     scale > trough:disabled {
       background-image: none;
       border-color: #c8c5c1;
       background-color: #dfdddb; }
+      scale > fill:disabled:backdrop,
       scale > trough:disabled:backdrop {
         border-color: #c8c5c1;
         background-color: #dfdddb; }
+    scale > fill:backdrop,
     scale > trough:backdrop {
       background-color: rgba(0, 0, 0, 0.1); }
   scale > trough > highlight {
@@ -1543,11 +1548,11 @@ scale {
       background-color: #d1cecb;
       box-shadow: 0 0 0 1px #c7c3c0; }
   scale > trough > slider {
-    margin: -8px;
-    min-width: 14px;
+    min-width: 18px;
     min-height: 18px;
-    border: none;
+    margin: -8px;
     border-radius: 0px;
+    border: none;
     color: #FFFFFF;
     background-color: transparent;
     background-position: center center;
@@ -1555,70 +1560,78 @@ scale {
     box-shadow: none; }
     scale > trough > slider:backdrop {
       color: #686868; }
-    scale.horizontal > trough > slider,
-    scale.horizontal.marks-after:not(.marks-before) > trough > slider {
-      background-image: -gtk-scaled(url("assets/slider-horizontal.png"), url("assets/slider-horizontal@2.png")); }
-      scale.horizontal > trough > slider:focus,
-      scale.horizontal.marks-after:not(.marks-before) > trough > slider:focus {
-        background-image: -gtk-scaled(url("assets/slider-horizontal-focused.png"), url("assets/slider-horizontal-focused@2.png")); }
-        scale.horizontal > trough > slider:focus:hover,
-        scale.horizontal.marks-after:not(.marks-before) > trough > slider:focus:hover {
-          background-image: -gtk-scaled(url("assets/slider-horizontal-focused-hover.png"), url("assets/slider-horizontal-focused-hover@2.png")); }
-      scale.horizontal > trough > slider:disabled,
-      scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled {
+  scale.horizontal > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-horizontal.png"), url("assets/slider-horizontal@2.png")); }
+    scale.horizontal > trough > slider:focus {
+      background-image: -gtk-scaled(url("assets/slider-horizontal-focused.png"), url("assets/slider-horizontal-focused@2.png")); }
+      scale.horizontal > trough > slider:focus:hover {
+        background-image: -gtk-scaled(url("assets/slider-horizontal-focused-hover.png"), url("assets/slider-horizontal-focused-hover@2.png")); }
+    scale.horizontal > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-horizontal-disabled.png"), url("assets/slider-horizontal-disabled@2.png")); }
+      scale.horizontal > trough > slider:disabled:backdrop {
         background-image: -gtk-scaled(url("assets/slider-horizontal-disabled.png"), url("assets/slider-horizontal-disabled@2.png")); }
-        scale.horizontal > trough > slider:disabled:backdrop,
-        scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled:backdrop {
-          background-image: -gtk-scaled(url("assets/slider-horizontal-disabled.png"), url("assets/slider-horizontal-disabled@2.png")); }
-      scale.horizontal > trough > slider:backdrop,
-      scale.horizontal.marks-after:not(.marks-before) > trough > slider:backdrop {
+    scale.horizontal > trough > slider:backdrop {
+      background-image: -gtk-scaled(url("assets/slider-horizontal-disabled.png"), url("assets/slider-horizontal-disabled@2.png")); }
+  scale.horizontal.marks-after:not(.marks-before) > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-horizontal.png"), url("assets/slider-horizontal@2.png")); }
+    scale.horizontal.marks-after:not(.marks-before) > trough > slider:focus {
+      background-image: -gtk-scaled(url("assets/slider-horizontal-focused.png"), url("assets/slider-horizontal-focused@2.png")); }
+      scale.horizontal.marks-after:not(.marks-before) > trough > slider:focus:hover {
+        background-image: -gtk-scaled(url("assets/slider-horizontal-focused-hover.png"), url("assets/slider-horizontal-focused-hover@2.png")); }
+    scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-horizontal-disabled.png"), url("assets/slider-horizontal-disabled@2.png")); }
+      scale.horizontal.marks-after:not(.marks-before) > trough > slider:disabled:backdrop {
         background-image: -gtk-scaled(url("assets/slider-horizontal-disabled.png"), url("assets/slider-horizontal-disabled@2.png")); }
-    scale.horizontal.marks-before:not(.marks-after) > trough > slider {
-      background-image: -gtk-scaled(url("assets/slider-horizontal-left.png"), url("assets/slider-horizontal-left@2.png")); }
-      scale.horizontal.marks-before:not(.marks-after) > trough > slider:focus {
-        background-image: -gtk-scaled(url("assets/slider-horizontal-left-focused.png"), url("assets/slider-horizontal-left-focused@2.png")); }
-        scale.horizontal.marks-before:not(.marks-after) > trough > slider:focus:hover {
-          background-image: -gtk-scaled(url("assets/slider-horizontal-left-focused-hover.png"), url("assets/slider-horizontal-left-focused-hover@2.png")); }
-      scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled {
+    scale.horizontal.marks-after:not(.marks-before) > trough > slider:backdrop {
+      background-image: -gtk-scaled(url("assets/slider-horizontal-disabled.png"), url("assets/slider-horizontal-disabled@2.png")); }
+  scale.horizontal.color > trough > slider, scale.horizontal.marks-before:not(.marks-after) > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-horizontal-left.png"), url("assets/slider-horizontal-left@2.png")); }
+    scale.horizontal.color > trough > slider:focus, scale.horizontal.marks-before:not(.marks-after) > trough > slider:focus {
+      background-image: -gtk-scaled(url("assets/slider-horizontal-left-focused.png"), url("assets/slider-horizontal-left-focused@2.png")); }
+      scale.horizontal.color > trough > slider:focus:hover, scale.horizontal.marks-before:not(.marks-after) > trough > slider:focus:hover {
+        background-image: -gtk-scaled(url("assets/slider-horizontal-left-focused-hover.png"), url("assets/slider-horizontal-left-focused-hover@2.png")); }
+    scale.horizontal.color > trough > slider:disabled, scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-horizontal-left-disabled.png"), url("assets/slider-horizontal-left-disabled@2.png")); }
+      scale.horizontal.color > trough > slider:disabled:backdrop, scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled:backdrop {
         background-image: -gtk-scaled(url("assets/slider-horizontal-left-disabled.png"), url("assets/slider-horizontal-left-disabled@2.png")); }
-        scale.horizontal.marks-before:not(.marks-after) > trough > slider:disabled:backdrop {
-          background-image: -gtk-scaled(url("assets/slider-horizontal-left-disabled.png"), url("assets/slider-horizontal-left-disabled@2.png")); }
-      scale.horizontal.marks-before:not(.marks-after) > trough > slider:backdrop {
-        background-image: -gtk-scaled(url("assets/slider-horizontal-left-disabled.png"), url("assets/slider-horizontal-left-disabled@2.png")); }
-    scale.vertical > trough > slider {
-      margin: -8px;
-      min-height: 14px;
-      min-width: 18px; }
-    scale.vertical > trough > slider,
-    scale.vertical.marks-after:not(.marks-before) > trough > slider {
-      background-image: -gtk-scaled(url("assets/slider-vertical.png"), url("assets/slider-vertical@2.png")); }
-      scale.vertical > trough > slider:focus,
-      scale.vertical.marks-after:not(.marks-before) > trough > slider:focus {
-        background-image: -gtk-scaled(url("assets/slider-vertical-focused.png"), url("assets/slider-vertical-focused@2.png")); }
-        scale.vertical > trough > slider:focus:hover,
-        scale.vertical.marks-after:not(.marks-before) > trough > slider:focus:hover {
-          background-image: -gtk-scaled(url("assets/slider-vertical-focused-hover.png"), url("assets/slider-vertical-focused-hover@2.png")); }
-      scale.vertical > trough > slider:disabled,
-      scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled {
+    scale.horizontal.color > trough > slider:backdrop, scale.horizontal.marks-before:not(.marks-after) > trough > slider:backdrop {
+      background-image: -gtk-scaled(url("assets/slider-horizontal-left-disabled.png"), url("assets/slider-horizontal-left-disabled@2.png")); }
+  scale.vertical > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-vertical.png"), url("assets/slider-vertical@2.png")); }
+    scale.vertical > trough > slider:focus {
+      background-image: -gtk-scaled(url("assets/slider-vertical-focused.png"), url("assets/slider-vertical-focused@2.png")); }
+      scale.vertical > trough > slider:focus:hover {
+        background-image: -gtk-scaled(url("assets/slider-vertical-focused-hover.png"), url("assets/slider-vertical-focused-hover@2.png")); }
+    scale.vertical > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-vertical-disabled.png"), url("assets/slider-vertical-disabled@2.png")); }
+      scale.vertical > trough > slider:disabled:backdrop {
         background-image: -gtk-scaled(url("assets/slider-vertical-disabled.png"), url("assets/slider-vertical-disabled@2.png")); }
-        scale.vertical > trough > slider:disabled:backdrop,
-        scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled:backdrop {
-          background-image: -gtk-scaled(url("assets/slider-vertical-disabled.png"), url("assets/slider-vertical-disabled@2.png")); }
-      scale.vertical > trough > slider:backdrop,
-      scale.vertical.marks-after:not(.marks-before) > trough > slider:backdrop {
+    scale.vertical > trough > slider:backdrop {
+      background-image: -gtk-scaled(url("assets/slider-vertical-disabled.png"), url("assets/slider-vertical-disabled@2.png")); }
+  scale.vertical.color:dir(ltr) > trough > slider, scale.vertical.marks-after:not(.marks-before) > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-vertical.png"), url("assets/slider-vertical@2.png")); }
+    scale.vertical.color:dir(ltr) > trough > slider:focus, scale.vertical.marks-after:not(.marks-before) > trough > slider:focus {
+      background-image: -gtk-scaled(url("assets/slider-vertical-focused.png"), url("assets/slider-vertical-focused@2.png")); }
+      scale.vertical.color:dir(ltr) > trough > slider:focus:hover, scale.vertical.marks-after:not(.marks-before) > trough > slider:focus:hover {
+        background-image: -gtk-scaled(url("assets/slider-vertical-focused-hover.png"), url("assets/slider-vertical-focused-hover@2.png")); }
+    scale.vertical.color:dir(ltr) > trough > slider:disabled, scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-vertical-disabled.png"), url("assets/slider-vertical-disabled@2.png")); }
+      scale.vertical.color:dir(ltr) > trough > slider:disabled:backdrop, scale.vertical.marks-after:not(.marks-before) > trough > slider:disabled:backdrop {
         background-image: -gtk-scaled(url("assets/slider-vertical-disabled.png"), url("assets/slider-vertical-disabled@2.png")); }
-    scale.vertical.marks-before:not(.marks-after) > trough > slider {
-      background-image: -gtk-scaled(url("assets/slider-vertical-left.png"), url("assets/slider-vertical-left@2.png")); }
-      scale.vertical.marks-before:not(.marks-after) > trough > slider:hover {
-        background-image: -gtk-scaled(url("assets/slider-vertical-left-focused.png"), url("assets/slider-vertical-left-focused@2.png")); }
-        scale.vertical.marks-before:not(.marks-after) > trough > slider:hover:hover {
-          background-image: -gtk-scaled(url("assets/slider-vertical-left-focused-hover.png"), url("assets/slider-vertical-left-focused-hover@2.png")); }
-      scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled {
+    scale.vertical.color:dir(ltr) > trough > slider:backdrop, scale.vertical.marks-after:not(.marks-before) > trough > slider:backdrop {
+      background-image: -gtk-scaled(url("assets/slider-vertical-disabled.png"), url("assets/slider-vertical-disabled@2.png")); }
+  scale.vertical.color:dir(rtl) > trough > slider, scale.vertical.marks-before:not(.marks-after) > trough > slider {
+    background-image: -gtk-scaled(url("assets/slider-vertical-left.png"), url("assets/slider-vertical-left@2.png")); }
+    scale.vertical.color:dir(rtl) > trough > slider:hover, scale.vertical.marks-before:not(.marks-after) > trough > slider:hover {
+      background-image: -gtk-scaled(url("assets/slider-vertical-left-focused.png"), url("assets/slider-vertical-left-focused@2.png")); }
+      scale.vertical.color:dir(rtl) > trough > slider:hover:hover, scale.vertical.marks-before:not(.marks-after) > trough > slider:hover:hover {
+        background-image: -gtk-scaled(url("assets/slider-vertical-left-focused-hover.png"), url("assets/slider-vertical-left-focused-hover@2.png")); }
+    scale.vertical.color:dir(rtl) > trough > slider:disabled, scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled {
+      background-image: -gtk-scaled(url("assets/slider-vertical-left-disabled.png"), url("assets/slider-vertical-left-disabled@2.png")); }
+      scale.vertical.color:dir(rtl) > trough > slider:disabled:backdrop, scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled:backdrop {
         background-image: -gtk-scaled(url("assets/slider-vertical-left-disabled.png"), url("assets/slider-vertical-left-disabled@2.png")); }
-        scale.vertical.marks-before:not(.marks-after) > trough > slider:disabled:backdrop {
-          background-image: -gtk-scaled(url("assets/slider-vertical-left-disabled.png"), url("assets/slider-vertical-left-disabled@2.png")); }
-      scale.vertical.marks-before:not(.marks-after) > trough > slider:backdrop {
-        background-image: -gtk-scaled(url("assets/slider-vertical-left-disabled.png"), url("assets/slider-vertical-left-disabled@2.png")); }
+    scale.vertical.color:dir(rtl) > trough > slider:backdrop, scale.vertical.marks-before:not(.marks-after) > trough > slider:backdrop {
+      background-image: -gtk-scaled(url("assets/slider-vertical-left-disabled.png"), url("assets/slider-vertical-left-disabled@2.png")); }
   scale.fine-tune.horizontal {
     padding-top: 9px;
     padding-bottom: 9px;
@@ -1954,34 +1967,41 @@ calendar {
   border-style: solid;
   border-color: #dbd9d6;
   color: #4C4C4C; }
-  calendar.header {
+  calendar > header {
     border: none;
     border-bottom: 1px solid #f0efed;
     color: #3C3C3C; }
-  calendar.button {
-    color: rgba(76, 76, 76, 0.45); }
-    calendar.button:hover {
-      color: #4C4C4C; }
-    calendar.button:backdrop {
-      color: rgba(130, 130, 130, 0.45); }
-    calendar.button:disabled {
-      color: rgba(159, 159, 158, 0.45); }
-  calendar:selected {
-    border-radius: 7px;
-    color: #FFFFFF;
-    background-color: #F07746; }
-    calendar:selected:backdrop {
-      color: #686868;
-      background-color: #dbd9d6; }
-  calendar:indeterminate {
-    color: alpha(currentColor, 0.1); }
-  calendar.highlight {
-    color: #9f9f9e; }
-    calendar.highlight:backdrop {
-      color: #c9c8c7; }
-  calendar:backdrop {
-    color: #828282;
-    border-color: #dbd9d6; }
+    calendar > header > button {
+      border: none;
+      box-shadow: none;
+      background: none;
+      border-radius: 0; }
+      calendar > header > button:hover {
+        color: #4C4C4C; }
+      calendar > header > button:backdrop {
+        color: #828282; }
+      calendar > header > button:disabled {
+        color: #9f9f9e; }
+  calendar > grid > label.today {
+    box-shadow: inset 0px -2px #dbd9d6; }
+    calendar > grid > label.today:selected {
+      box-shadow: none; }
+  calendar > grid > label:focus {
+    outline-color: #dbd9d6;
+    outline-offset: -2px;
+    outline-width: 2px;
+    outline-style: solid; }
+  calendar > grid > label.day-number {
+    padding: 3px; }
+    calendar > grid > label.day-number:selected {
+      color: #FFFFFF;
+      background-color: #F07746;
+      background-image: linear-gradient(to bottom, #fa895b, #F07746);
+      border-radius: 3px; }
+    calendar > grid > label.day-number:checked {
+      background-color: rgba(240, 119, 70, 0.3); }
+  calendar > grid > label.day-number.other-month {
+    color: alpha(currentColor, 0.3); }
 
 window.dialog.message {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
