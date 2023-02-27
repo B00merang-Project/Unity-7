@@ -233,14 +233,12 @@ window.aboutdialog image.large-icons {
 
 .osd button, button.osd {
   padding: 5px 6px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 6px;
-  color: #DFDBD2;
-  border-color: #2d2d2a;
+  border: 1px solid #2d2d2a;
   border-left-color: #2c2b29;
   border-right-color: #2c2b29;
   border-bottom-color: #252423;
+  color: #DFDBD2;
   background-color: #3C3B37;
   background-image: linear-gradient(to bottom, #3f3e3a, #3a3936);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
@@ -498,14 +496,12 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 5px 6px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 6px;
-  color: #4C4C4C;
-  border-color: #d1cecb;
+  border: 1px solid #d1cecb;
   border-left-color: #ccc9c5;
   border-right-color: #ccc9c5;
   border-bottom-color: #ada9a5;
+  color: #4C4C4C;
   background-color: #F2F1F0;
   background-image: linear-gradient(to bottom, #fdfdfd, #ecebea);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
@@ -584,10 +580,8 @@ button {
       background-image: none; }
 
 button.destructive-action {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cd3647;
   border-radius: 6px;
+  border: 1px solid #cd3647;
   color: #fdeaed;
   background-color: #ED3146;
   background-image: linear-gradient(to bottom, #ED3146, #d02336); }
@@ -606,10 +600,8 @@ button.destructive-action {
     background-image: none; }
 
 button.suggested-action {
-  border-width: 1px;
-  border-style: solid;
   border-radius: 6px;
-  border-color: #48B259;
+  border: 1px solid #48B259;
   color: #FFFFFF;
   background-color: #48B259;
   background-image: linear-gradient(to bottom, #61cb72, #469b53); }
