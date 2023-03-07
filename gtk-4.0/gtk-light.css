@@ -1375,62 +1375,63 @@ treeview ~ scrollbar.vertical {
   margin-top: -1px; }
 
 switch {
-  color: #4C4C4C;
-  outline-offset: -4px;
   margin: 2px;
-  border: 1px solid #c7c3c0;
   border-radius: 5px;
+  border: 1px solid #c7c3c0;
+  color: #4C4C4C;
   background-color: #F2F1F0;
   background-image: linear-gradient(to bottom, #dbd9d6, #e9e7e6);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.1); }
   switch:checked {
+    border-color: #9c4d2d;
     color: #FFFFFF;
     background-color: #F07746;
     background-image: linear-gradient(to bottom, #e46633, #F07746);
-    border-color: #9c4d2d;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.11); }
     switch:checked:backdrop {
-      box-shadow: none;
       color: #686868;
-      background-color: #dbd9d6;
-      background-image: none; }
+      background-color: #c7c3c0;
+      background-image: none;
+      box-shadow: none; }
   switch:disabled {
-    color: #9f9f9e;
     border-color: #dddbd9;
+    color: #9f9f9e;
     background-color: #f6f6f5;
     background-image: linear-gradient(to bottom, #dfdddb, #edeceb); }
     switch:disabled:backdrop {
-      color: #c9c8c7;
       border-color: #c7c3c0;
+      color: #c9c8c7;
       background-color: #dfdddb;
       background-image: none; }
   switch:backdrop {
-    color: #828282;
     border-color: #dbd9d6;
+    color: #828282;
     background-color: #dbd9d6;
     background-image: none; }
-  switch slider {
+  switch > slider {
+    margin: -1px;
     min-width: 36px;
     min-height: 22px;
-    margin: -1px;
-    border: 1px solid #b2aea9;
     border-radius: 6px;
+    border: 1px solid #b2aea9;
     color: #4C4C4C;
     background-color: #F2F1F0;
-    background-image: linear-gradient(to bottom, white, #edeceb); }
-  switch:checked slider {
+    background-image: linear-gradient(to bottom, white, #edeceb);
+    box-shadow: none; }
+  switch:checked > slider {
     border-color: #8c492e; }
-  switch:checked:backdrop slider {
+  switch:checked:backdrop > slider {
     border-color: #b2aea9;
+    background-color: #F2F1F0;
     background-image: none; }
-  switch:disabled slider {
+  switch:disabled > slider {
     border-color: #d1cecb;
     background-color: #ebeae8; }
-  switch:disabled:backdrop slider {
+  switch:disabled:backdrop > slider {
     border-color: #dbd9d6;
     background-color: #F2F1F0;
     background-image: none; }
-  switch:backdrop slider {
+  switch:backdrop > slider {
     border-color: #c7c3c0;
     background-color: #F2F1F0;
     background-image: none; }
