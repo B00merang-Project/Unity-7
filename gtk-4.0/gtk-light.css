@@ -1126,7 +1126,7 @@ popover.background, popover.background:backdrop {
 
 popover > arrow,
 popover > contents {
-  border: 1px solid #dbd9d6;
+  border: 1px solid white;
   color: #4C4C4C;
   background-color: #ede8e3;
   background-clip: padding-box;
@@ -1149,15 +1149,15 @@ magnifier {
 
 popover.menu > contents {
   min-width: 120px;
-  padding: 2px; }
+  padding: 0px; }
 
 popover.menu box.inline-buttons {
-  padding: 0px 4px; }
+  padding: 0px 8px; }
 
 popover.menu modelbutton {
-  min-height: 20px;
-  padding-left: 4px;
-  padding-right: 4px;
+  min-height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
   border-radius: 0px;
   border: none;
   background-color: transparent;
@@ -1192,7 +1192,7 @@ popover.menu list separator {
   margin: 0; }
 
 popover.menu popover.menu {
-  padding: 0 0 2px 0; }
+  padding: 0 0 0px 0; }
   popover.menu popover.menu > contents {
     margin: 0;
     border-radius: 0px; }
@@ -1204,9 +1204,9 @@ popover.menu accelerator {
   popover.menu accelerator:disabled {
     color: #9d9a98; }
   popover.menu accelerator:dir(ltr) {
-    margin-left: 4px; }
+    margin-left: 8px; }
   popover.menu accelerator:dir(rtl) {
-    margin-right: 4px; }
+    margin-right: 8px; }
 
 menubar {
   padding: 0px;
@@ -1224,7 +1224,8 @@ menubar {
     border-bottom-right-radius: 0px;
     border: 1px solid transparent;
     color: #4C4C4C;
-    background-color: transparent; }
+    background-color: transparent;
+    box-shadow: none; }
     menubar > item:selected {
       border-color: #b9ac9f;
       color: #4C4C4C;
@@ -1473,7 +1474,7 @@ checkbutton.text-button, radiobutton.text-button {
   outline-offset: 0; }
 
 check, radio {
-  margin: 4px;
+  margin: 0 4px;
   min-height: 18px;
   min-width: 18px;
   border: none;
