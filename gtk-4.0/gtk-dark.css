@@ -1719,16 +1719,16 @@ progressbar {
   font-size: smaller;
   color: #efede9; }
   progressbar > trough {
-    border: 1px solid #363532;
     border-radius: 10px;
+    border: 1px solid #363532;
     background-color: rgba(0, 0, 0, 0.1);
     background-image: linear-gradient(to bottom, #363532, #383733);
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.1); }
     progressbar > trough:backdrop {
       background-color: #33322f; }
   progressbar > trough > progress {
-    border: 1px solid #d05828;
     border-radius: 10px;
+    border: 1px solid #d05828;
     background-color: #F07746;
     background-image: linear-gradient(to bottom, #fa895b, #F07746); }
     progressbar > trough > progress:backdrop {
